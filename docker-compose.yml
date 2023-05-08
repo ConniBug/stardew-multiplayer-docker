@@ -5,7 +5,7 @@ services:
     build: docker
     container_name: stardew
     environment:
-      - "VNC_PASSWORD=nyanyanya"
+      - "VNC_PASSWORD=nya"
       - "DISPLAY_HEIGHT=900"
       - "DISPLAY_WIDTH=1200"
       ## Always On Server mod
@@ -128,15 +128,13 @@ services:
 
     ports:
       # VNC
-      - 5902:5900
+      # - 5902:5900
       # NOVNC WEB
-      - 5801:5800
+      # - 5801:5800
       # Game  
       - 24642:24642/udp
     volumes:
       # Saves go here now
-      - ./valley_saves:/config/xdg/config/StardewValley/Saves
+      - /home/debian/stardew/config:/config
       # If you'd like to set an existing savegame before the first start otherwise this file will be edited when starting the first game
-      - ./configs/autoload.json:/data/Stardew/Stardew Valley/Mods/AutoLoadGame/config.json
-
-      
+      - /home/debian/stardew/data:/data
