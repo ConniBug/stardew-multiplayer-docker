@@ -138,3 +138,8 @@ services:
       - /home/debian/stardew/config:/config
       # If you'd like to set an existing savegame before the first start otherwise this file will be edited when starting the first game
       - /home/debian/stardew/data:/data
+      
+      # Saves go here now
+      - /home/debian/stardew/saves:/config/xdg/config/StardewValley/Saves
+      # If you'd like to set an existing savegame before the first start otherwise this file will be edited when starting the first game
+      - /home/debian/stardew/autoload.json:/data/Stardew/Stardew Valley/Mods/AutoLoadGame/config.json
